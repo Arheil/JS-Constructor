@@ -1,6 +1,9 @@
 import image from './assets/xfiles.png';
 import {
-	Block
+	TextBlock,
+	TitleBlock,
+	ColumnsBlock,
+	ImageBlock
 } from './classes/blocks';
 
 const text = `
@@ -8,7 +11,7 @@ const text = `
 `;
 
 export const model = [
-	new Block('title', 'Конструктор сайтов на JavaScript', {
+	new TitleBlock('Конструктор сайтов на JavaScript', {
 		tag: 'h2',
 		styles: {
 			background: 'linear-gradient(to right, #ff0099, #493240)',
@@ -17,14 +20,14 @@ export const model = [
 			'text-align': 'center'
 		}
 	}),
-	new Block('text', text, {
+	new TextBlock(text, {
 		styles: {
 			background: 'linear-gradient(to left, #f2994a, #f2c94c)',
 			padding: '1rem',
 			'font-weight': 'bold'
 		}
 	}),
-	new Block('columns', [
+	new ColumnsBlock([
 		'Заголовок колонки 1',
 		'Заголовок колонки 2',
 		'Заголовок колонки 3'
@@ -36,7 +39,7 @@ export const model = [
 			'font-weight': 'bold'
 		}
 	}),
-	new Block('image', image, {
+	new ImageBlock(image, {
 		styles: {
 			padding: '2rem 0',
 			display: 'flex',
